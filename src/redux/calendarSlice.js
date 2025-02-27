@@ -1,15 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { dummyData } from '../utils/constants';
 
 const initialState = {
-  data: [],
+  data: dummyData || [],
   isSelected: false,
   selectedDate: false,
   isLoading: false,
   error: null,
 };
 
-const calenderSlice = createSlice({
-  name: 'calender',
+const calendarSlice = createSlice({
+  name: 'calendar',
   initialState,
   reducers: {
     selectDateStart: (state) => {
@@ -29,6 +30,6 @@ const calenderSlice = createSlice({
   },
 });
 
-export const { selectDateStart, selectDateSuccess, loadCountrieselectDateFailuresFailure } = calenderSlice.actions;
+export const { selectDateStart, selectDateSuccess, selectDateFailure } = calendarSlice.actions;
 
-export default calenderSlice.reducer;
+export default calendarSlice.reducer;
