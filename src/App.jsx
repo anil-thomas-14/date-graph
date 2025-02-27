@@ -4,11 +4,7 @@ import Calendar from './components/calendar';
 import './App.css';
 
 function App() {
-
   return (
-    // <>
-    //   <Calendar />
-    // </>
     <Provider store={store}>
       <Calendar />
   </Provider>
